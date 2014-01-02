@@ -18,7 +18,7 @@ public class CareerCup3_6 {
 	
 	public static Stack<Integer> sortedStack(Stack<Integer> myStack){
 		Stack<Integer>newStack = new Stack<Integer>();
-		if(myStack.isEmpty()) return null;
+		//if(myStack.isEmpty()) return null;
 	
 		while(!myStack.isEmpty()){
 			Integer temp = myStack.pop();
