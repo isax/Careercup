@@ -1,6 +1,6 @@
 import java.util.Stack;
 
-public class CareerCup3_6 {
+public class SortStack {
 	
 	public static void main(String[]args){
 		
