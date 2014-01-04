@@ -1,7 +1,7 @@
 import java.util.*;
 
 
-public class CareerCup3_4{
+public class Hanoi{
 	public static void main(String []args){
 		int n = 4;
 		Tower[] test = new Tower[3];
