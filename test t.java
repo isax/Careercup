@@ -31,6 +31,7 @@ public class TwoSum {
         int [] res = new int[2];
         HashMap<Integer, Integer> hm = new HashMap<Integer, Integer>();
         int len = numbers.length;
+        
         for(int i = 0; i<len; i++){
             hm.put(numbers[i], i);
         }
