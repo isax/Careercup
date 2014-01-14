@@ -42,7 +42,6 @@ public class Subsets {
 		for(int i = 0; i<max; i++){
 			ArrayList<Integer>item = convertToSet(S, i);
 			res.add(item);
-			
 		}
 		return res;
 	}
