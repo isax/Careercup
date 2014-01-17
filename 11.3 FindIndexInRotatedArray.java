@@ -1,9 +1,8 @@
 public class FindIndexInRotatedArray {
 	
 	public int search(int[] A, int target) {
-            if(A==null) return -1;
-            return search(A, target, 0, A.length-1);
-        
+                if(A==null) return -1;
+                return search(A, target, 0, A.length-1);
         }
 	
 	/*
