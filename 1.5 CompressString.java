@@ -53,5 +53,50 @@ public class CompressString {
 		String res = compress(str);
 		System.out.println(res);
 	}
+	
+	/*
+	 * StringBuffer not allowed
+	 */
+	public static String compressNoSB(String str){
+		if(str==null||str.isEmpty()) return str;
+		
+		//check length after compression
+		int compressedLength = countCompression(str);
+		if(compressedLength>=str.length())
+			return str;	
+		
+		char []res = new char[compressedLength];
+		int index = 0;
+		char last = str.charAt(0);	
+		int count = 1; // initialize to 1 for first char
+		for(int i = 1; i<str.length(); i++){
+			char cur = str.charAt(i);
+			if(last==cur){
+				count++;	
+			}
+			else{
+				index = setChar(res, index, last, count);
+				last = cur;
+				count = 1;
+			}
+		}
+		
+		//need to append things store in last and count into StringBuffer
+		index = setChar(res, index, last, count);
+
+		return String.valueOf(res);
+	}
+	
+	public static int setChar(char[]c, int index, char last, int count){
+		c[index] = last;
+		index++;
+
+		char[]countChars = String.valueOf(count).toCharArray();		
+		for(char ch: countChars){
+			c[index] = ch;
+			index++;
+		}
+		return index;
+	}
 
 }
