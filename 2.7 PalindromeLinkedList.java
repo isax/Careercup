@@ -33,6 +33,8 @@ public class PalindromeLinkedList {
 	/*
 	 * Recursive
 	 * 
+	 * Time: O(n) Space: O(n)
+	 * 
 	 * head               returned node
 	 *  |                       |
 	 *  1       2       2       1
