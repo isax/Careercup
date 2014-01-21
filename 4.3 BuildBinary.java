@@ -1,5 +1,8 @@
 public class BuildBinary {
 	
+	/*
+	 * Time: O(n) Space: O(n+logn) = O(n)
+	 */
 	public static TreeNode buildHelper(int[]a, int left, int right){
 		if(left>right) return null;
 		int mid = (left+right)/2;
