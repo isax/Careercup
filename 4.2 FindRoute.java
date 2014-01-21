@@ -16,7 +16,7 @@ public class FindRoute {
 					}
 					for(GraphNode child: cur.children){
 						//if(child.visited==false)
-							queue.add(child);
+						      queue.add(child);
 					}
 				}
 			}	
