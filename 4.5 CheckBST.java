@@ -19,7 +19,6 @@ public class CheckBST {
                 inorder(root.right, a);        
     }
     
- 
     /*
      * 34 / 54 test cases passed...Have no idea!!
      */
@@ -61,11 +60,11 @@ public class CheckBST {
     }
   
     /*
-	   * Min/Max Solution Time: O(n) Space: O(logn)
-	   *      20
-	   * 
-	   * 10       30 ----------20 needs to be <= its max; 30 needs to be > its min.
-	   */
+     * Min/Max Solution Time: O(n) Space: O(logn)
+     *      20
+     * 
+     * 10       30 ----------20 needs to be <= its max; 30 needs to be > its min.
+     */
     public static boolean checkMinMax(TreeNode root, int min, int max){
                 if(root==null) return true;
                 
@@ -82,7 +81,7 @@ public class CheckBST {
                 return true;
     }
     public boolean isValidBST(TreeNode root) {
-        return checkMinMax(root, Integer.MIN_VALUE, Integer.MAX_VALUE);
+                return checkMinMax(root, Integer.MIN_VALUE, Integer.MAX_VALUE);
     }
     
 }
