@@ -41,6 +41,36 @@ public class CommonAncestor {
 		
 	}
 	
+	/*
+	 * Solution 3:  More complex
+	 */
+	public static Res commonAncestorHelper2(TreeNode root, TreeNode p, TreeNode q){
+		if(root==null) return new Res(null, false);
+		
+		if(root==p&&root==q) return new Res(root, true);
+		
+		Res left = commonAncestorHelper2(root.left, p, q);
+		if(left.isAncestor) return left;
+		
+		Res right = commonAncestorHelper2(root.right, p, q);
+		if(right.isAncestor) return right;
+		
+		if(left.root!=null&&right.root!=null){ //diff side
+			return new Res(root, true); // common ancestor
+		}else if(root==p||root==q){
+			boolean isAncestor = left.root!=null||right.root!=null?true:false;
+			return new Res(root, isAncestor);
+		}else{
+			return new Res(left.root!=null?left.root:right.root, false);
+		}
+	}
+	public static TreeNode commonAncestor2(TreeNode root, TreeNode p, TreeNode q){
+		Res res = commonAncestorHelper2(root, p, q);
+		if(res.isAncestor) return res.root;
+		else return null;
+	}
+	
+	
 	public static void main(String[]args){
 		TreeNode n1 = new TreeNode(1);
 		TreeNode n2 = new TreeNode(2);
@@ -58,9 +88,7 @@ public class CommonAncestor {
 		n3.right = n7;
 		
 		System.out.println(commonAncestor(n1, n4, n7).value);
-		
 	}
-
 }
 
 class TreeNode{
