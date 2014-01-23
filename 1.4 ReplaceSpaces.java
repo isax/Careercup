@@ -16,8 +16,7 @@ public class ReplaceSpaces {
 			if(count==0) break;
 			
 			if(a[i]!=' '){
-				a[cur] = a[i];
-				cur--; 	
+				a[cur--] = a[i];
 			}
 			else{
 				count--;
