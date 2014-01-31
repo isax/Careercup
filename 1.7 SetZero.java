@@ -17,7 +17,7 @@ public class SetZero {
 		
 		for(int i = 0; i<rowNum; i++){
 			for(int j = 0; j<colNum; j++){
-				if(row[i]==true || row[j]==true){
+				if(row[i]==true || col[j]==true){
 					matrix[i][j] = 0;
 				}
 			}
