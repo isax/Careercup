@@ -20,9 +20,9 @@ public class ReplaceSpaces {
 			}
 			else{
 				count--;
-				a[cur--] = '%';
 				a[cur--] = '0';
 				a[cur--] = '2';
+				a[cur--] = '%';
 			}
 		}
 		
